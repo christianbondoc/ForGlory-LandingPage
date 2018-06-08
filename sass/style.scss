@@ -1,0 +1,573 @@
+    /*!
+Theme Name: For-Glory
+Theme URI: http://underscores.me/
+Author: Christian Bondoc
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: for-glory
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+For-Glory is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+    /*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+    
+    @import "variables-site/variables-site";
+    @import "mixins/mixins-master";
+    /*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+    
+    @import "normalize";
+    /*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+    
+    @import "typography/typography";
+    /*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+    
+    @import "elements/elements";
+    /*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+    
+    @import "forms/forms";
+    /*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+    
+    @import "navigation/navigation";
+    /*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+    
+    @import "modules/accessibility";
+    /*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+    
+    @import "modules/alignments";
+    /*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+    
+    @import "modules/clearings";
+    /*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+    
+    @import "site/secondary/widgets";
+    /*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+    
+    @import "site/site";
+    /*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+    
+    @import "modules/infinite-scroll";
+    /*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+    
+    @import "media/media";
+    /*--------------------------------------------------------------
+# Custom
+--------------------------------------------------------------*/
+    /* Coolors Exported Palette - coolors.co/fcfcfc-a3d5ff-83c9f4-6f73d2-7681b3 */
+    /* RG */
+    
+    $offwhite: rgba(252, 252, 252, 1);
+    $soft-blue: rgba(163, 213, 255, 1);
+    $primary-color: rgba(163, 213, 255, 1);
+    $primary-blue: #A3D5FF;
+    $medium-blue: #83C9F4;
+    $soft-purp: rgba(111, 115, 210, 1);
+    $medium-purple: rgba(118, 129, 179, 1);
+    $secondary-gray: #f2f2f2;
+    $primary-gray: #f3f3f3;
+    $dark-gray: #646464;
+    $white: #fff;
+    $color__background-body: #fff;
+    $color__background-screen: #f1f1f1;
+    $color__background-hr: #ccc;
+    $color__background-button: #e6e6e6;
+    $color__background-pre: #eee;
+    $color__background-ins: #fff9c0;
+    $color__text-screen: #21759b;
+    $color__text-input: #666;
+    $color__text-input-focus: #111;
+    $color__link: $soft-blue;
+    $color__link-visited: $medium-purple;
+    $color__link-hover: $medium-blue;
+    $color__text-main: #404040;
+    $color__border-button: #ccc #ccc #bbb;
+    $color__border-button-hover: #ccc #bbb #aaa;
+    $color__border-button-focus: #aaa #bbb #bbb;
+    $color__border-input: #ccc;
+    $color__border-abbr: #666;
+    /* Font */
+    
+    $font-stack: 'Lato',
+    'Arial',
+    'Helvetica Neue',
+    'Open Sans',
+    Helvetica,
+    sans-serif;
+    * {
+        font-family: $font-stack;
+    }
+    
+    // -- Headers --//
+    .header-info {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .site-header {
+        background-color: $white;
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+    
+    .site-header a {
+        color: #999;
+        transition: ease-in-out color .15s;
+    }
+    
+    .header-logo {
+        width: 50px;
+    }
+    
+    .site-header a:hover {
+        color: $primary-gray;
+        text-decoration: none;
+    }
+    
+    nav.site-header ul li {
+        display: inline-block;
+        margin-left: 15px;
+    }
+    
+    .nav-bar {
+        .menu {
+            float: left;
+            color: $color__text-input-focus;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+    }
+    
+    .ddIcon {
+        display: none;
+        float: right;
+    }
+    
+    // -- Banners -- //
+    .banner {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .intro-banner {
+        height: 50vh;
+        background-image: url('./Assets/fgBg2.png');
+        color: $primary-gray;
+    }
+    
+    .intro-banner-txt,
+    {
+        h1 {
+            font-size: 5rem;
+            font-weight: 400;
+            letter-spacing: 20px;
+            text-transform: uppercase;
+            margin: 0 auto;
+        }
+        p {
+            letter-spacing: 10px;
+            font-size: 1rem;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+        h6 {
+            margin: 20px auto;
+        }
+    }
+    
+    .art-banner {
+        height: 25vh;
+        background-image: url('./Assets/battlefield.png');
+        color: $primary-gray;
+        .container {
+            height: 50%;
+        }
+    }
+    
+    .tech-banner {
+        height: 35vh;
+        background-image: url('./Assets/fgBg.png');
+        color: $primary-gray;
+    }
+    
+    .waiting-banner {
+        height: 50vh;
+        background-image: url('./Assets/battlefield.png');
+        color: $primary-gray;
+    }
+    
+    .text-shadow {
+        text-shadow: 1px 1px $secondary-gray;
+    }
+    
+    .card-deck {
+        height: 100%;
+        .light-solider {
+            margin-top: 25px;
+        }
+        .wellman {
+            margin-top: 15px;
+        }
+    }
+    
+    .art-text-content {
+        margin: 25px auto;
+    }
+    
+    .CTAbtn {
+        .playNow,
+        .gitPull {
+            margin: 0 auto;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            width: 170px;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            color: #FFFFFF;
+            font-family: Open Sans;
+            font-size: 20px;
+            font-weight: 400;
+            background-color: transparent;
+            box-shadow: 2px 4px 20px 1px #000000;
+            -webkit-box-shadow: 2px 4px 20px 1px #000000;
+            -moz-box-shadow: 2px 4px 20px 1px #000000;
+            border: solid #FFFFFF 1px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+        }
+        .playNow:hover,
+        .gitPull:hover {
+            background: $primary-gray;
+            color: $medium-purple;
+            text-decoration: none;
+            position: relative;
+            top: -1px;
+            font-weight: 800;
+        }
+    }
+    
+    .valk-vs-wellman {
+        .first-monster {
+            .big-valk {
+                height: 100%;
+            }
+            .big-wellman {
+                height: 90%;
+            }
+        }
+        .desc-monster-txt {
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            font-weight: 200;
+            text-align: center;
+            padding-top: 35px;
+        }
+    }
+    
+    .banner-txt {
+        text-transform: uppercase;
+        font-weight: 400;
+        text-shadow: 2px 2px 5px $color__text-main;
+    }
+    
+    .section-title {
+        text-align: center;
+        padding-top: 50px;
+        h2 {
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 10px;
+            line-height: 20px;
+            font-size: 1em;
+        }
+        p {
+            margin-bottom: 25px;
+        }
+    }
+    
+    .border {
+        display: block;
+        margin: 30px auto;
+        width: 80px;
+        height: 2px;
+    }
+    
+    .vertical-align {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-game {
+        margin-top: 50px;
+        .fa {
+            font-size: 2rem;
+        }
+        .tech-info {
+            margin: 50px auto;
+        }
+    }
+    
+    .comp-title {
+        text-align: center;
+        h2 {
+            text-transform: uppercase;
+            font-weight: 200;
+            letter-spacing: 20px;
+            font-size: 1em;
+        }
+        .border {
+            display: block;
+            margin: 30px auto;
+            width: 100px;
+            height: 2px;
+        }
+    }
+    
+    .log-title {
+        text-align: center;
+        h2 {
+            margin-top: 50px;
+            text-transform: uppercase;
+            font-weight: 200;
+            letter-spacing: 20px;
+            font-size: 1em;
+        }
+        .border {
+            display: block;
+            margin: 30px auto;
+            width: 100px;
+            height: 2px;
+        }
+    }
+    
+    // -- FAQ --//
+    .faq-txt {
+        text-transform: uppercase;
+        font-weight: 200;
+        letter-spacing: 40px;
+        font-size: 2rem;
+    }
+    
+    .faq {
+        padding: 20px;
+    }
+    
+    .panel-title {
+        cursor: pointer;
+        background-color: $primary-gray;
+        color: $dark-gray;
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .panel-body {
+        cursor: pointer;
+    }
+    
+    //-- Email --//
+    .email-banner {
+        color: $primary-gray;
+        background-image: url('./Assets/fgBg2.png');
+        height: 40vh;
+        font-size: 1rem;
+    }
+    
+    .email-list {
+        .email-btn {
+            margin: .4rem 0;
+            background-color: $primary-blue;
+            padding: .5em;
+            width: 50%;
+        }
+        .email-btn:hover {
+            background-color: $soft-blue;
+        }
+        .email-form {
+            background-color: #f4f4f4;
+            box-shadow: none;
+            color: #565656;
+            line-height: 1.5;
+            min-height: 3.5em;
+            width: 50%;
+            margin: 20px auto;
+        }
+    }
+    
+    // Styled the dev blogs //
+    .page-title {
+        letter-spacing: 10px;
+    }
+    
+    .entry-header,
+    .entry-summary,
+    .entry-content,
+    .entry-footer,
+    .page-content {
+        margin-right: 7.6923%;
+        margin-left: 7.6923%;
+    }
+    
+    .entry-title {
+        font-size: 28px;
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 1em;
+    }
+    
+    .entry-title a {
+        color: #1a1a1a;
+    }
+    
+    .entry-title a:hover,
+    .entry-title a:focus {
+        color: $medium-purple;
+    }
+    
+    .entry-footer {
+        text-align: center;
+        .cat-link,
+        .comments-link,
+        .edit-link {
+            margin: 20px;
+        }
+    }
+    
+    //-- footer/header logo --//
+    .footer-logo {
+        width: 100%;
+    }
+    
+    .footer {
+        ul,
+        li {
+            list-style-type: none;
+            list-style-position: inside;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    
+    .wellman-txt-right {
+        display: none;
+    }
+    
+    // -- Medias --//
+    @media only screen and (max-width: 540px) {
+        .intro-banner-txt {
+            h1 {
+                font-size: 2em;
+                letter-spacing: normal;
+                margin: 10px auto;
+            }
+            p {
+                letter-spacing: normal;
+                font-size: 0.75em;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 767px) {
+        .header-logo {
+            display: none;
+        }
+        .nav-bar {
+            float: none;
+            padding: 0px;
+        }
+        .nav-bar {
+            .menu {
+                display: none;
+            }
+        }
+        .nav-bar,
+        .ddIcon {
+            float: right;
+            display: block;
+        }
+        nav.site-header ul li {
+            display: block;
+        }
+        .menu {
+            margin: 0px;
+        }
+        .nav-bar.responsive {
+            position: relative;
+        }
+        .nav-bar.responsive .menu.ddIcon {
+            position: absolute;
+        }
+        .nav-bar.responsive .menu {
+            float: none;
+            display: block;
+            text-align: right;
+            padding: 0px 35px;
+        }
+        .wellman-txt-right {
+            display: block;
+        }
+        .wellman-txt-left {
+            display: none;
+        }
+    }
